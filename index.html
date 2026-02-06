@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCart | Online Grocery Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+</head>
+<body>
+
+    <div id="loading-overlay" class="hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">Fresh<span>Cart</span></div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for groceries...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="nav-icons">
+                <div id="login-btn" class="nav-icon"><i class="fas fa-user"></i></div>
+                <div id="cart-btn" class="nav-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Fresh Groceries Delivered to Your Door</h1>
+        </section>
+
+        <section id="product-grid" class="product-grid">
+            </section>
+    </main>
+
+    <div id="cart-sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Your Cart</h2>
+            <span id="close-cart">&times;</span>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total: $<span id="total-price">0.00</span></h3>
+        </div>
+        <button class="checkout-btn">Checkout Now</button>
+    </div>
+
+    <div id="auth-modal" class="modal-overlay hidden">
+        <div class="auth-container">
+            <span id="close-auth" class="close-btn">&times;</span>
+            <div class="form-toggle">
+                <button id="toggle-login" class="active">Login</button>
+                <button id="toggle-register">Register</button>
+            </div>
+            <form id="login-form" class="auth-form">
+                <h3>Welcome Back</h3>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="auth-submit">Sign In</button>
+            </form>
+            <form id="register-form" class="auth-form hidden">
+                <h3>Create Account</h3>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Create Password" required>
+                <button type="submit" class="auth-submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <h2>Suggestions & Feedback</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <textarea placeholder="Tell us how we can improve..." rows="4" required></textarea>
+            <button type="submit" class="add-btn">Send Feedback</button>
+        </form>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
